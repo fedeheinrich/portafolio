@@ -2,9 +2,13 @@
 <html lang="es-ar">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educacion</title>
+    <title>Formación</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles/education.css">
 </head>
 <body>
     <header class="header">
@@ -15,10 +19,92 @@
             <a href="projects.html" class="header__menu__link">Proyectos</a>
         </nav>
     </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
+    <main class="educacion">
+        <section class="educacion__contenido">
+            <h1 class="educacion__titulo">Mi Educación y Certificaciones</h1>
+            <div class="educacion__item">
+                <div class="educacion__item__header">
+                    <span class="material-icons educacion__item__icono">school</span>
+                    <h2 class="educacion__item__titulo">Tecnicatura Universitaria en Programación</h2>
+                </div>
+                <p class="educacion__item__texto">Universidad Tecnológica Nacional (UTN) FRBB - 2025</p>
+                <p class="educacion__item__texto">Formación integral en desarrollo de software, algoritmos, estructuras de datos, programación orientada a objetos y desarrollo de aplicaciones.</p>
+            </div>
+            <div class="educacion__item">
+                <div class="educacion__item__header">
+                    <span class="material-icons educacion__item__icono">code</span>
+                    <h2 class="educacion__item__titulo">Full Stack Python</h2>
+                </div>
+                <p class="educacion__item__texto">Programa Codo a Codo 4.0 - Gobierno de la Provincia de Buenos Aires</p>
+                <p class="educacion__item__texto">Programa intensivo de desarrollo web Full Stack utilizando Python como lenguaje principal. Abarca desde fundamentos de programación hasta desarrollo de aplicaciones web completas.</p>
+            </div>
+            <div class="educacion__item">
+                <div class="educacion__item__header">
+                    <span class="material-icons educacion__item__icono">security</span>
+                    <h2 class="educacion__item__titulo">Ciberseguridad en la Era Digital</h2>
+                </div>
+                <p class="educacion__item__texto">Universidad Nacional de Tres de Febrero (UNTREF)</p>
+                <p class="educacion__item__texto">Programa especializado en fundamentos de ciberseguridad, protección de datos, análisis de vulnerabilidades y mejores prácticas de seguridad informática.</p>
+            </div>
+            <div class="educacion__item">
+                <div class="educacion__item__header">
+                    <span class="material-icons educacion__item__icono">computer</span>
+                    <h2 class="educacion__item__titulo">Programa Alura ONE: Oracle Next Education</h2>
+                </div>
+                <p class="educacion__item__texto">Actualmente en curso</p>
+                <p class="educacion__item__texto">Formación completa que abarca fundamentos de programación, desarrollo frontend, backend y ciencia de datos. En la etapa inicial, repaso las bases de programación y desarrollo web frontend, complementadas con habilidades blandas y desarrollo profesional. El programa continúa con especializaciones en backend y análisis de datos, proporcionando una formación tecnológica versátil que responde a las demandas actuales del mercado laboral en tecnología.</p>
+            </div>
+        </section> <!-- Cierra la sección de educación -->
+        <section class="habilidades"> <!-- Mueve la sección de habilidades dentro del main -->
+            <h1 class="habilidades__titulo">Tecnologías Dominadas</h1>
+            <div class="habilidades__iconos">
+                <div class="habilidad__item">
+                    <i class="fab fa-html5 habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">HTML</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-css3-alt habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">CSS</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-js habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">JavaScript</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-python habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Flask</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-bootstrap habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Bootstrap</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-python habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Python</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-java habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Java</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fas fa-database habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">SQL</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-git-alt habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Git</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fab fa-github habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">GitHub</p>
+                </div>
+                <div class="habilidad__item">
+                    <i class="fas fa-shield-alt habilidad__item__icono"></i>
+                    <p class="habilidad__item__texto">Ciberseguridad</p>
+                </div>
+            </div>
         </section>
-    </main>
+    </main> <!-- Cierra el main -->
     <footer class="footer">
         <p class="footer__texto">Desarrollado por Federico Heinrich</p>
     </footer>

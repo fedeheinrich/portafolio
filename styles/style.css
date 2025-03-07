@@ -53,7 +53,7 @@ body{
 }
 
 .presentacion__contenido__titulo{
-    font-size: 2rem; /*2.5rem*/
+    font-size: 2rem;
     font-family: var(--fuente-krona);
 }
 
@@ -113,7 +113,6 @@ body{
     font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
     font-weight: 400;
-
 }
 
 @media (max-width: 1200px) {
@@ -129,5 +128,8 @@ body{
     }
     .presentacion__contenido{
         width: auto;
+    }
+    .footer{
+        
     }
 }

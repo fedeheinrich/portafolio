@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --hover-color: #272727;
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.educacion {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar las secciones verticalmente */
+    align-items: center;
+    padding: 5% 12.5%;
+}
+
+.educacion__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 10px; /* Reduce el margen inferior para separar de la sección habilidades */
+}
+
+.educacion__titulo {
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.educacion__item {
+    background-color: var(--hover-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.educacion__item__header {
+    display: flex;
+    align-items: center;
+}
+
+.educacion__item__titulo {
+    font-size: 1.5rem;
+    font-family: var(--fuente-krona);
+    color: var(--color-terciario);
+    margin-left: 10px;
+}
+
+.educacion__item__texto {
+    font-size: 1.2rem;
+    font-family: var(--fuente-montserrat);
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+    .educacion {
+        padding: 5%;
+    }
+}
+
+.educacion__item__icono {
+    font-size: 30px;
+    color: var(--color-terciario);
+}
+
+.habilidad__item__icono {
+    font-size: 30px;
+    color: var(--color-terciario);
+    margin-right: 10px; /* Añade margen a la derecha para separar del texto */
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 5% 15%;
+}
+
+.habilidades__titulo {
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.habilidades__iconos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.habilidad__item {
+    display: flex;
+    align-items: center;
+    background-color: var(--hover-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.habilidad__item__texto {
+    font-size: 1.2rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-secundario);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: var(--fuente-montserrat);
+    margin-left: 10px;
+}
+
+.badge--in-progress {
+    background-color: #FFA500; /* Color naranja para "En curso" */
+    color: var(--color-primario);
+}
+
+.badge--completed {
+    background-color: #32CD32; /* Color verde para "Completo" */
+    color: var(--color-primario);
+}
