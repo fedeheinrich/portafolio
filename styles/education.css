@@ -4,6 +4,7 @@
     --color-primario: #000000;
     --color-secundario: #F6F6F6;
     --color-terciario: #22D4FD;
+    --color-cuaternario: #0A2A43;
     --hover-color: #272727;
     --fuente-krona: 'Krona One', sans-serif;
     --fuente-montserrat: 'Montserrat', sans-serif;
@@ -22,12 +23,23 @@ body {
 }
 
 .header {
-    padding: 2% 0% 0% 15%;
+    background-color: var(--color-cuaternario);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    justify-content: center; /* Centra el contenido del header horizontalmente */
+    padding: 1.2rem;
 }
 
 .header__menu {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
-    gap: 80px;
+    justify-content: center; /* Cambia a center para centrar el menú */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: var(--color-cuaternario);
 }
 
 .header__menu__link {
@@ -68,13 +80,13 @@ body {
 .educacion__item__header {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .educacion__item__titulo {
     font-size: 1.5rem;
     font-family: var(--fuente-krona);
     color: var(--color-terciario);
-    margin-left: 10px;
 }
 
 .educacion__item__texto {
@@ -148,7 +160,7 @@ body {
 .habilidad__item__texto {
     font-size: 1.2rem;
     font-family: var(--fuente-montserrat);
-    color: var(--color-secundario);
+    color: var(--colo-secundario);
 }
 
 .badge {
@@ -160,12 +172,22 @@ body {
     margin-left: 10px;
 }
 
-.badge--in-progress {
+.badge{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.in-progress {
     background-color: #FFA500; /* Color naranja para "En curso" */
     color: var(--color-primario);
 }
 
-.badge--completed {
+.completed {
     background-color: #32CD32; /* Color verde para "Completo" */
     color: var(--color-primario);
+
+    
 }
