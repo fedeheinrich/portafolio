@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/proyectos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -15,12 +17,149 @@
             <a href="projects.html" class="header__menu__link">Proyectos</a>
         </nav>
     </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
+    <main class="main">
+        <div class="main__contenedor-titulo">
+            <h1>Mis Proyectos</h1>
+            <p class="subtitulo">Una muestra de mi trabajo como desarrollador</p>
+        </div>
+        <section class="proyectos">
+            <!-- Portafolio Web -->
+            <div class="proyectos__caja-proyecto">
+                <div class="proyectos__caja-proyecto__caja-imagen">
+                    <img src="./img/Captura de pantalla 2025-03-24 230947.png" alt="Portafolio Web Personal">
+                </div>
+                <div class="proyectos__caja-proyecto__caja-contenido">
+                    <h3>Portafolio Web Personal</h3>
+                    <p class="proyectos__caja-proyecto__caja-contenido__proyecto-descripcion">Diseño y desarrollo de mi sitio web personal, creado desde cero para mostrar mis habilidades como desarrollador.</p>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-tecnologias">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-links">
+                        <a href="https://github.com/fedeheinrich/portfolio" target="_blank" class="btn btn-github">
+                            <i class="fab fa-github"></i> Ver código
+                        </a>
+                        <a href="#" class="btn btn-demo">
+                            <i class="fas fa-external-link-alt"></i> Ver demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Challenge Alura -->
+            <div class="proyectos__caja-proyecto">
+                <div class="proyectos__caja-proyecto__caja-imagen">
+                    <video src="./img/Grabación de pantalla 2025-03-24 232328.mp4" autoplay loop muted alt="Challenge Alura Oracle ONE">
+                </div>
+                <div class="proyectos__caja-proyecto__caja-contenido">
+                    <h3>Challenge Alura Oracle ONE</h3>
+                    <p class="proyectos__caja-proyecto__caja-contenido__proyecto-descripcion">Encriptador/desencriptador de texto desarrollado como parte del programa Oracle ONE con reglas específicas del challenge.</p>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-links">
+                        <a href="https://github.com/fedeheinrich/challenge-alura-encriptador" target="_blank" class="btn btn-github">
+                            <i class="fab fa-github"></i> Ver código
+                        </a>
+                        <a href="https://fedeheinrich.github.io/challenge-alura-encriptador/" target="_blank" class="btn btn-demo">
+                            <i class="fas fa-external-link-alt"></i> Ver demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejercicios de APIs -->
+            <div class="proyectos__caja-proyecto">
+                <div class="proyectos__caja-proyecto__caja-imagen">
+                    <img src="" alt="Ejercicios de APIs">
+                </div>
+                <div class="proyectos__caja-proyecto__caja-contenido">
+                    <h3>Ejercicios de APIs</h3>
+                    <p class="proyectos__caja-proyecto__caja-contenido__proyecto-descripcion">Serie de prácticas realizadas para dominar el consumo de APIs y la presentación de datos externos de manera efectiva.</p>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-tecnologias">
+                        <span>JavaScript</span>
+                        <span>Flask</span>
+                        <span>JSON</span>
+                    </div>
+                    <div class="proyectos__caja-proyecto__caja-contenido__caja-links">
+                        <a href="" target="_blank" class="btn btn-github">
+                            <i class="fab fa-github"></i> Ver código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proximos-proyectos">
+            <h2>Próximos Proyectos</h2>
+            <div class="proximos-proyectos__caja-proximos-proyectos">
+                <div class="proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Aplicación de gestión de tareas</h3>
+                    <p>Una aplicación web para organizar actividades diarias con funcionalidades de arrastrar y soltar.</p>
+                </div>
+                <div class="proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Dashboard de datos</h3>
+                    <p>Visualización de datos obtenidos de APIs públicas presentados en un dashboard interactivo.</p>
+                </div>
+                <div class="proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto">
+                    <i class="fas fa-clone"></i>
+                    <h3>Clon de interfaz</h3>
+                    <p>Recreación de la interfaz de usuario de una aplicación popular para demostrar habilidades de maquetación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto">
+            <h2>¿Tienes alguna idea o proyecto en el que podamos colaborar?</h2>
+            <a href="#contacto" class="btn btn-primary">Contáctame</a>
         </section>
     </main>
-    <footer class="footer">
-        <p class="footer__texto">Desarrollado por Federico Heinrich - © 2025 TecnoTech. Todos los derechos reservados.</p>
+
+    <footer>
+        <p>&copy; 2024 Federico Heinrich. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const mainTitle = document.querySelector('.main__contenedor-titulo');
+        const projectCards = document.querySelectorAll('.proyectos__caja-proyecto');
+        const upcomingProjects = document.querySelectorAll('.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto');
+        const contactCta = document.querySelector('.contacto');
+    
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('fade-in');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observar elementos correctamente
+        observer.observe(mainTitle);
+        
+        projectCards.forEach(card => {
+            observer.observe(card);
+        });
+        
+        upcomingProjects.forEach(project => {
+            observer.observe(project);
+        });
+        
+        observer.observe(contactCta);
+    });
+    </script>
 </body>
 </html>

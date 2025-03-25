@@ -5,9 +5,23 @@
     --color-secundario: #F6F6F6;
     --color-terciario: #22D4FD;
     --color-cuaternario: #0A2A43;
+    --texto-light: grey;
     --hover-color: #272727;
     --fuente-krona: 'Krona One', sans-serif;
     --fuente-montserrat: 'Montserrat', sans-serif;
+    --primary-color: #0070f3;
+    --secondary-color: #6c63ff;
+    --text-color: #333;
+    --light-text: #666;
+    --bg-color: #f9f9f9;
+    --card-bg: #fff;
+    --accent-light: #f0f0f0;
+    --accent-dark: #333;
+    --github-color: #24292e;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 * {

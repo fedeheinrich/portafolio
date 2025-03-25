@@ -1,0 +1,311 @@
+/* Variables CSS */
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #6c63ff;
+    --text-color: #333;
+    --light-text: #666;
+    --bg-color: #f9f9f9;
+    --card-bg: #fff;
+    --accent-light: #f0f0f0;
+    --accent-dark: #333;
+    --github-color: #24292e;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-montserrat);
+    color: var(--texto-light);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main__contenedor-titulo {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos para la sección de proyectos usando flexbox */
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.proyectos__caja-proyecto {
+    flex: 1 1 320px;
+    max-width: 380px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    background: var(--card-bg);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.proyectos__caja-proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+.proyectos__caja-proyecto__caja-imagen {
+    height: 200px;
+    overflow: hidden;
+}
+
+.proyectos__caja-proyecto__caja-imagen img,
+.proyectos__caja-proyecto__caja-imagen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proyectos__caja-proyecto:hover .proyectos__caja-proyecto__caja-imagen img,
+.proyectos__caja-proyecto:hover .proyectos__caja-proyecto__caja-imagen video {
+    transform: scale(1.05);
+}
+
+.proyectos__caja-proyecto__caja-contenido {
+    padding: 1.5rem;
+}
+
+.proyectos__caja-proyecto__caja-contenido h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.proyectos__caja-proyecto__caja-contenido__proyecto-descripcion {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.proyectos__caja-proyecto__caja-contenido__caja-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.proyectos__caja-proyecto__caja-contenido__caja-tecnologias span {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.proyectos__caja-proyecto__caja-contenido__caja-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-github {
+    background: var(--github-color);
+    color: white;
+}
+
+.btn-demo {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Sección de próximos proyectos */
+.proximos-proyectos {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.proximos-proyectos h2 {
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.proximos-proyectos h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Usando flexbox para próximos proyectos */
+.proximos-proyectos__caja-proximos-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto h3 {
+    margin-bottom: 1rem;
+}
+
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto p {
+    color: var(--light-text);
+}
+
+/* Sección de Contacto */
+.contacto {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius);
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contacto h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary-color);
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --text-color: #f0f0f0;
+        --light-text: #c0c0c0;
+        --accent-light: #333;
+        --accent-dark: #c0c0c0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .proyectos__caja-proyecto {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .proximos-proyectos__caja-proximos-proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitulo {
+        font-size: 1rem;
+    }
+    
+    .contacto h2 {
+        font-size: 1.5rem;
+    }
+}
