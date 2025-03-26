@@ -24,7 +24,6 @@
 
 body {
     font-family: var(--fuente-montserrat);
-    color: var(--texto-light);
 }
 
 main {
@@ -40,13 +39,15 @@ main {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
 .subtitulo {
     font-size: 1.2rem;
-    color: var(--light-text);
+    color: var(--card-bg);
     max-width: 600px;
     margin: 0 auto;
+    color: #ffffff;
 }
 
 /* Estilos para la sección de proyectos usando flexbox */
