@@ -150,3 +150,177 @@ body {
     border-radius: 0 0 10px 10px; 
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    /* General responsive adjustments */
+    .header__menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header__menu__link {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        padding: 5%;
+        gap: 40px;
+    }
+
+    .presentacion__contenido,
+    .presentacion__foto {
+        width: 100%;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .presentacion__enlaces {
+        align-items: center;
+    }
+
+    .presentacion__enlaces__link {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__menu__link {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.5rem;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 1rem;
+    }
+
+    .presentacion__enlaces__subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .presentacion__enlaces__link {
+        font-size: 1rem;
+        padding: 15px 0;
+    }
+
+    .projects-section,
+    .education-section {
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 0.2rem;
+    }
+
+    .header__menu {
+        gap: 0.5rem;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.3rem;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 0.9rem;
+    }
+
+    .presentacion__foto {
+        max-width: 300px;
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Viewport meta tag adjustment */
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+/* Flexible images and media */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text scaling for better readability */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/* Adjustments for other pages like education and projects */
+@media screen and (max-width: 1200px) {
+    .educacion,
+    .proyectos {
+        padding: 3%;
+    }
+
+    .educacion__item,
+    .proyectos__caja-proyecto {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .habilidades__iconos {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .habilidades__iconos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
