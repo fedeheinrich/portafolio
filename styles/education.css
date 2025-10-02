@@ -1,120 +1,294 @@
+/* Education Styles - Responsive con Flexbox */
+
 .educacion {
     display: flex;
-    flex-direction: column; /* Cambia a columna para apilar las secciones verticalmente */
+    flex-direction: column;
     align-items: center;
-    padding: 5% 12.5%;
+    padding: 3rem 10%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .educacion__contenido {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 2rem;
     width: 100%;
-    margin-bottom: 10px; /* Reduce el margen inferior para separar de la sección habilidades */
+    margin-bottom: 3rem;
 }
 
 .educacion__titulo {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-family: var(--fuente-krona);
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
 }
 
 .educacion__item {
     background-color: var(--hover-color);
-    padding: 20px;
+    padding: clamp(1rem, 3vw, 1.5rem);
     border-radius: 10px;
+    transition: var(--transition);
+}
+
+.educacion__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(34, 212, 253, 0.2);
 }
 
 .educacion__item__header {
     display: flex;
     align-items: center;
-    gap: 8px;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .educacion__item__titulo {
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     font-family: var(--fuente-krona);
     color: var(--color-terciario);
+    flex: 0 1 auto;
 }
 
 .educacion__item__texto {
-    font-size: 1.2rem;
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
     font-family: var(--fuente-montserrat);
-    margin-top: 10px;
+    margin-top: 0.8rem;
+    line-height: 1.6;
+    color: var(--color-secundario);
 }
 
 .educacion__item__icono {
-    font-size: 30px;
+    font-size: clamp(24px, 4vw, 30px);
     color: var(--color-terciario);
+    flex-shrink: 0;
+    margin-left: 0.3rem;
 }
 
-.habilidad__item__icono {
-    font-size: 30px;
-    color: var(--color-terciario);
-    margin-right: 10px; /* Añade margen a la derecha para separar del texto */
-}
-
+/* Habilidades Section */
 .habilidades {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 5% 15%;
+    gap: 2rem;
+    padding: 3rem 5%;
+    width: 100%;
 }
 
 .habilidades__titulo {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-family: var(--fuente-krona);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .habilidades__iconos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(1rem, 2vw, 1.5rem);
     justify-content: center;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .habilidad__item {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--hover-color);
-    padding: 10px;
+    padding: clamp(0.8rem, 2vw, 1rem);
     border-radius: 10px;
+    transition: var(--transition);
+    flex: 0 1 auto;
+    min-width: 120px;
+}
+
+.habilidad__item:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-cuaternario);
+    box-shadow: 0 5px 15px rgba(34, 212, 253, 0.3);
+}
+
+.habilidad__item__icono {
+    font-size: clamp(24px, 4vw, 30px);
+    color: var(--color-terciario);
+    margin-right: 0.6rem;
+    flex-shrink: 0;
 }
 
 .habilidad__item__texto {
-    font-size: 1.2rem;
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
     font-family: var(--fuente-montserrat);
-    color: var(--colo-secundario);
+    color: var(--color-secundario);
+    white-space: nowrap;
 }
 
+/* Badges */
 .badge {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-family: var(--fuente-montserrat);
-    margin-left: 10px;
-}
-
-.badge{
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
+    padding: 0.4rem 0.8rem;
     border-radius: 50px;
     font-weight: 600;
-    margin-left: 10px;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    font-family: var(--fuente-montserrat);
+    margin-left: 0.6rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
+
 .in-progress {
-    background-color: #FFA500; /* Color naranja para "En curso" */
+    background-color: #FFA500;
     color: var(--color-primario);
 }
 
 .completed {
-    background-color: #32CD32; /* Color verde para "Completo" */
+    background-color: #32CD32;
     color: var(--color-primario);
 }
 
+/* Media Queries */
+
+/* Tablets grandes */
+@media screen and (max-width: 1024px) {
+    .educacion {
+        padding: 2.5rem 8%;
+    }
+
+    .habilidades {
+        padding: 2.5rem 5%;
+    }
+
+    .habilidades__iconos {
+        gap: 1.2rem;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .educacion {
+        padding: 2rem 5%;
+    }
+
+    .educacion__contenido {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .educacion__item {
+        padding: 1.2rem;
+    }
+
+    .educacion__item__header {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .educacion__item__titulo {
+        flex: 0 1 100%;
+        margin-bottom: 0.3rem;
+    }
+
+    .educacion__item__icono {
+        margin-left: 0;
+    }
+
+    .badge {
+        margin-left: 0;
+    }
+
+    .habilidades {
+        padding: 2rem 3%;
+    }
+
+    .habilidades__iconos {
+        gap: 1rem;
+    }
+
+    .habilidad__item {
+        min-width: 100px;
+        padding: 0.7rem;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px) {
+    .educacion {
+        padding: 1.5rem 3%;
+    }
+
+    .educacion__contenido {
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .educacion__item {
+        padding: 1rem;
+    }
+
+    .educacion__item__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .educacion__item__titulo {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .badge {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .habilidades {
+        padding: 1.5rem 2%;
+    }
+
+    .habilidades__iconos {
+        gap: 0.8rem;
+    }
+
+    .habilidad__item {
+        min-width: 90px;
+        padding: 0.6rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .habilidad__item__icono {
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .habilidad__item__texto {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media screen and (max-width: 360px) {
+    .educacion {
+        padding: 1rem 2%;
+    }
+
+    .educacion__item {
+        padding: 0.8rem;
+    }
+
+    .habilidades {
+        padding: 1rem 2%;
+    }
+
+    .habilidades__iconos {
+        gap: 0.6rem;
+    }
+
+    .habilidad__item {
+        min-width: 80px;
+        padding: 0.5rem;
+    }
+}

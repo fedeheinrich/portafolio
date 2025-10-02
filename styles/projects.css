@@ -1,3 +1,5 @@
+/* Projects Styles - Responsive con Flexbox */
+
 /* Variables CSS */
 :root {
     --primary-color: #0070f3;
@@ -15,60 +17,54 @@
     --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--fuente-montserrat);
-}
-
-main {
-    max-width: 1200px;
+/* Main Container */
+.main {
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 5%;
 }
 
 .main__contenedor-titulo {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
-h1 {
-    font-size: 2.5rem;
+.main__contenedor-titulo h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 0.5rem;
     color: #ffffff;
+    font-family: var(--fuente-krona);
 }
 
 .subtitulo {
-    font-size: 1.2rem;
-    color: var(--card-bg);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #ffffff;
     max-width: 600px;
     margin: 0 auto;
-    color: #ffffff;
+    line-height: 1.5;
 }
 
-/* Estilos para la sección de proyectos usando flexbox */
+/* Proyectos Section - Flexbox */
 .proyectos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
     margin: 3rem 0;
+    padding: 0 1rem;
 }
 
 .proyectos__caja-proyecto {
     flex: 1 1 320px;
-    max-width: 380px;
+    max-width: 400px;
+    min-width: 280px;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     background: var(--card-bg);
     opacity: 0;
-    transform: translateY(20px);
+    will-change: opacity;
 }
 
 .proyectos__caja-proyecto:hover {
@@ -79,6 +75,7 @@ h1 {
 .proyectos__caja-proyecto__caja-imagen {
     height: 200px;
     overflow: hidden;
+    background: #f0f0f0;
 }
 
 .proyectos__caja-proyecto__caja-imagen img,
@@ -100,14 +97,17 @@ h1 {
 
 .proyectos__caja-proyecto__caja-contenido h3 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     margin-bottom: 0.75rem;
+    color: var(--accent-dark);
+    font-family: var(--fuente-krona);
 }
 
 .proyectos__caja-proyecto__caja-contenido__proyecto-descripcion {
     color: var(--light-text);
     margin-bottom: 1rem;
     line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -118,33 +118,37 @@ h1 {
 .proyectos__caja-proyecto__caja-contenido__caja-tecnologias {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .proyectos__caja-proyecto__caja-contenido__caja-tecnologias span {
     background: var(--accent-light);
     color: var(--accent-dark);
-    padding: 5px 10px;
+    padding: 0.4rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .proyectos__caja-proyecto__caja-contenido__caja-links {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
 
 .btn {
-    padding: 8px 16px;
+    padding: 0.6rem 1.2rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     transition: all 0.2s ease;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    white-space: nowrap;
 }
 
 .btn-github {
@@ -162,9 +166,9 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Sección de próximos proyectos */
+/* Próximos Proyectos */
 .proximos-proyectos {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
@@ -172,6 +176,9 @@ h1 {
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #ffffff;
+    font-family: var(--fuente-krona);
 }
 
 .proximos-proyectos h2:after {
@@ -185,25 +192,25 @@ h1 {
     background: var(--primary-color);
 }
 
-/* Usando flexbox para próximos proyectos */
 .proximos-proyectos__caja-proximos-proyectos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vw, 2rem);
     margin-top: 3rem;
 }
 
 .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
     flex: 1 1 250px;
-    max-width: 320px;
-    padding: 2rem;
+    max-width: 350px;
+    min-width: 220px;
+    padding: clamp(1.5rem, 3vw, 2rem);
     border-radius: var(--border-radius);
     background: var(--card-bg);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     opacity: 0;
-    transform: translateY(20px);
+    will-change: opacity;
 }
 
 .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto:hover {
@@ -212,42 +219,48 @@ h1 {
 }
 
 .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto i {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto h3 {
     margin-bottom: 1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--accent-dark);
 }
 
 .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto p {
     color: var(--light-text);
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 /* Sección de Contacto */
 .contacto {
     text-align: center;
-    padding: 4rem 2rem;
-    margin: 3rem 0;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+    margin: 3rem 1rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: var(--border-radius);
     color: white;
     opacity: 0;
-    transform: translateY(20px);
+    will-change: opacity;
 }
 
 .contacto h2 {
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    line-height: 1.4;
 }
 
 .btn-primary {
     background: white;
     color: var(--primary-color);
-    padding: 12px 24px;
-    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
+
 /* Animaciones */
 .fade-in {
     animation: fadeIn 0.6s ease forwards;
@@ -256,11 +269,189 @@ h1 {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+
+/* Tablets grandes */
+@media screen and (max-width: 1024px) {
+    .main {
+        padding: 0 4%;
+    }
+
+    .proyectos {
+        gap: 2rem;
+    }
+
+    .proyectos__caja-proyecto {
+        flex: 1 1 300px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 0 3%;
+    }
+
+    .proyectos {
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .proyectos__caja-proyecto {
+        flex: 1 1 100%;
+        max-width: 500px;
+        min-width: unset;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido {
+        padding: 1.2rem;
+    }
+
+    .proximos-proyectos {
+        padding: 2rem 1rem;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+        flex: 1 1 100%;
+        max-width: 500px;
+        min-width: unset;
+    }
+
+    .contacto {
+        margin: 2rem 0.5rem;
+        padding: 2rem 1rem;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 0 2%;
+    }
+
+    .main__contenedor-titulo {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .proyectos {
+        gap: 1.2rem;
+        margin: 1.5rem 0;
+        padding: 0 0.5rem;
+    }
+
+    .proyectos__caja-proyecto {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .proyectos__caja-proyecto__caja-imagen {
+        height: 180px;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido {
+        padding: 1rem;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido__caja-tecnologias {
+        gap: 0.4rem;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido__caja-tecnologias span {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido__caja-links {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+    }
+
+    .proximos-proyectos {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .proximos-proyectos h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos {
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+        flex: 1 1 100%;
+        padding: 1.5rem;
+    }
+
+    .contacto {
+        margin: 1.5rem 0.3rem;
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .contacto h2 {
+        margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media screen and (max-width: 360px) {
+    .main {
+        padding: 0 1%;
+    }
+
+    .proyectos {
+        gap: 1rem;
+        padding: 0 0.3rem;
+    }
+
+    .proyectos__caja-proyecto__caja-imagen {
+        height: 160px;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido {
+        padding: 0.8rem;
+    }
+
+    .proyectos__caja-proyecto__caja-contenido__caja-tecnologias span {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+        padding: 1.2rem;
+    }
+
+    .contacto {
+        margin: 1rem 0.2rem;
+        padding: 1.2rem 0.8rem;
     }
 }
 
@@ -274,4 +465,25 @@ h1 {
         --accent-light: #333;
         --accent-dark: #c0c0c0;
     }
+}
+
+/* Prevenir scroll horizontal y barras de desplazamiento */
+body, html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.main,
+.proyectos,
+.proximos-proyectos,
+.proximos-proyectos__caja-proximos-proyectos,
+.proyectos__caja-proyecto__caja-contenido__caja-links,
+.proyectos__caja-proyecto__caja-contenido__caja-tecnologias {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.proyectos__caja-proyecto,
+.proximos-proyectos__caja-proximos-proyectos__caja-proximo-proyecto {
+    overflow: hidden;
 }
